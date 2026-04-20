@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Spectrum - Transaction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="transaction-section">
+        <h2>Complete Your Purchase</h2>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Items: 3</p>
+            <p>Total Price: $150</p>
+        </div>
+
+        <!-- Shipping Information -->
+        <div class="shipping-info">
+            <h3>Shipping Information</h3>
+            <form id="shipping-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+
+                <label for="postal-code">Postal Code</label>
+                <input type="text" id="postal-code" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </form>
+        </div>
+
+        <!-- Payment Information -->
+        <div class="payment-info">
+            <h3>Payment Information</h3>
+            <form id="payment-form">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" required maxlength="16" placeholder="1234 5678 9012 3456">
+
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" required placeholder="MM/YY">
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" required maxlength="3" placeholder="123">
+
+                <button type="submit" onclick="completeTransaction()">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function completeTransaction() {
+            // Validate form entries here
+            alert("Transaction Completed! Thank you for shopping with Style Spectrum.");
+        }
+    </script>
+
+</body>
+</html>

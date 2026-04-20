@@ -1,0 +1,191 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cart Section Styling */
+.cart-section {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Cart Items Styling */
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-item input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+.delete-icon {
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+/* Total Price Section */
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.cart-total h3 {
+    color: #333;
+}
+
+/* Checkout Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Transaction Section */
+.transaction-section {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.transaction-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Order Summary */
+.order-summary {
+    margin-bottom: 20px;
+}
+
+.order-summary h3, .shipping-info h3, .payment-info h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-summary p {
+    margin: 5px 0;
+}
+
+/* Shipping Information */
+.shipping-info form, .payment-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+.shipping-info label, .payment-info label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.shipping-info input, .payment-info input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Success Message */
+.success-message {
+    width: 80%;
+    max-width: 600px;
+    background-color: #dff0d8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.success-message i {
+    font-size: 2em;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.success-message h3 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.success-message p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-section, .transaction-section, .success-message {
+        width: 90%;
+    }
+}

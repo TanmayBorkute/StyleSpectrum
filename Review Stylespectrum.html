@@ -1,0 +1,1362 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- Offline notification -->
+      <div class="fixed bottom-4 right-4 transform translate-y-full opacity-0 transition-all duration-300 offline:translate-y-0 offline:opacity-100">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+          You are currently offline
+        </div>
+      </div>
+   </body>
+</html><element id="19d204fa-8d5d-4745-8452-57d88b8f087f" data-section-id="19d204fa-8d5d-4745-8452-57d88b8f087f">
+
+<htmlCode>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Spectrum - Review & Rating</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+        html {
+            scroll-behavior: smooth;
+        }
+        .active-link {
+            @apply bg-neutral-700 text-white border-l-4 border-emerald-500;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50">
+    <div id="root" x-data="{ isOpen: false, activeLink: 'Home' }" class="flex">
+        <nav class="fixed h-screen w-64 bg-neutral-800 text-neutral-100 hidden lg:block">
+            <div class="p-4 border-b border-neutral-700">
+                <h1 class="text-2xl font-bold text-emerald-500">Style Spectrum</h1>
+            </div>
+            <div class="py-4">
+                <a href="index.html" @click="activeLink = 'Home'" class="flex items-center px-6 py-3 hover:bg-neutral-700 transition-colors duration-200" :class="{ 'active-link': activeLink === 'Home' }">
+                    <span>Home</span>
+                </a>
+              
+            </div>
+            <div class="absolute bottom-0 w-full p-4 border-t border-neutral-700">
+                <div class="flex items-center space-x-3">
+                    <img src="https://avatar.iran.liara.run/public" class="w-10 h-10 rounded-full" alt="Profile">
+                    <div>
+                        <p class="text-sm font-medium">John Doe</p>
+                        <p class="text-xs text-neutral-400">john@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden">
+            <button type="button" @click="isOpen = !isOpen" class="fixed top-4 right-4 z-50 p-2 rounded-lg bg-neutral-800 text-white">
+                <svg x-show="!isOpen" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg x-show="isOpen" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div x-show="isOpen" x-cloak @click.away="isOpen = false" class="fixed inset-0 bg-neutral-800 z-40"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0">
+                <div class="flex flex-col p-4">
+                    <a href="#layout_main" @click="isOpen = false; activeLink = 'Home'" class="py-3 text-white">Home</a>
+                    <a href="#review_form" @click="isOpen = false; activeLink = 'Reviews'" class="py-3 text-white">Reviews</a>
+                    <a href="#rating_display" @click="isOpen = false; activeLink = 'Ratings'" class="py-3 text-white">Ratings</a>
+                    <a href="#product_details" @click="isOpen = false; activeLink = 'Products'" class="py-3 text-white">Products</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="flex-1 ml-0 lg:ml-64 overflow-y-auto">
+            <header class="sticky top-0 bg-white border-b border-neutral-200 z-30">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <h2 class="text-xl font-semibold text-neutral-800">Style Spectrum Reviews</h2>
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <input type="search" placeholder="Search..." class="px-4 py-2 rounded-lg border border-neutral-200 focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <button class="p-2 rounded-lg hover:bg-neutral-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </button>
+                        <img src="https://avatar.iran.liara.run/public" alt="Profile" class="w-10 h-10 rounded-full cursor-pointer">
+                    </div>
+                </div>
+            </header>
+            <MountPoint>
+</htmlCode></element><element id="283dee42-1bb5-4cf9-b6df-e0abbb634b0b" data-section-id="283dee42-1bb5-4cf9-b6df-e0abbb634b0b">
+
+<htmlCode>
+<section id="review_form" class="p-6 bg-neutral-50">
+    <div class="max-w-3xl mx-auto bg-white border border-neutral-200/30 rounded-lg">
+        <div class="p-6 border-b border-neutral-200/30">
+            <h2 class="text-2xl font-semibold text-neutral-800">Write a Review</h2>
+            <p class="mt-2 text-neutral-600">Share your experience with our products</p>
+        </div>
+
+        <form class="p-6 space-y-6">
+            <div>
+                <label class="block mb-2 text-sm font-medium text-neutral-700">Product Name*</label>
+                <select class="w-full p-3 border border-neutral-200/30 rounded-lg focus:border-emerald-500 focus:outline-none bg-white">
+                    <option value="">Select a product</option>
+                    <option value="1">Classic Oxford Shirt</option>
+                    <option value="2">Premium Denim Jeans</option>
+                    <option value="3">Leather Derby Shoes</option>
+                </select>
+            </div>
+
+            <div class="space-y-2">
+                <label class="block text-sm font-medium text-neutral-700">Rating*</label>
+                <div class="flex items-center space-x-2">
+                    <button type="button" class="text-2xl text-neutral-300 hover:text-emerald-500 transition-colors">★</button>
+                    <button type="button" class="text-2xl text-neutral-300 hover:text-emerald-500 transition-colors">★</button>
+                    <button type="button" class="text-2xl text-neutral-300 hover:text-emerald-500 transition-colors">★</button>
+                    <button type="button" class="text-2xl text-neutral-300 hover:text-emerald-500 transition-colors">★</button>
+                    <button type="button" class="text-2xl text-neutral-300 hover:text-emerald-500 transition-colors">★</button>
+                </div>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-neutral-700">Review Title*</label>
+                <input type="text" class="w-full p-3 border border-neutral-200/30 rounded-lg focus:border-emerald-500 focus:outline-none" placeholder="Summarize your experience">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-neutral-700">Review Details*</label>
+                <textarea rows="4" class="w-full p-3 border border-neutral-200/30 rounded-lg focus:border-emerald-500 focus:outline-none" placeholder="What did you like or dislike about the product?"></textarea>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-neutral-700">Add Photos</label>
+                <div class="border-2 border-dashed border-neutral-200/30 rounded-lg p-6 text-center">
+                    <input type="file" accept="image/*" class="hidden" id="photo-upload" multiple>
+                    <label for="photo-upload" class="cursor-pointer">
+                        <svg class="mx-auto h-12 w-12 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <span class="mt-2 block text-sm text-neutral-600">Drop images here or click to upload</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="block text-sm font-medium text-neutral-700">Size Purchased</label>
+                <div class="flex flex-wrap gap-2">
+                    <button type="button" class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 focus:outline-none focus:border-emerald-500">S</button>
+                    <button type="button" class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 focus:outline-none focus:border-emerald-500">M</button>
+                    <button type="button" class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 focus:outline-none focus:border-emerald-500">L</button>
+                    <button type="button" class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 focus:outline-none focus:border-emerald-500">XL</button>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="block text-sm font-medium text-neutral-700">Fit</label>
+                <div class="flex items-center justify-between max-w-md">
+                    <span class="text-sm text-neutral-600">Too Small</span>
+                    <div class="flex gap-2">
+                        <button type="button" class="w-8 h-8 rounded-full border border-neutral-200/30 hover:border-emerald-500 focus:outline-none focus:border-emerald-500">1</button>
+                        <button type="button" class="w-8 h-8 rounded-full border border-neutral-200/30 hover:border-emerald-500 focus:outline-none focus:border-emerald-500">2</button>
+                        <button type="button" class="w-8 h-8 rounded-full border border-neutral-200/30 hover:border-emerald-500 focus:outline-none focus:border-emerald-500">3</button>
+                        <button type="button" class="w-8 h-8 rounded-full border border-neutral-200/30 hover:border-emerald-500 focus:outline-none focus:border-emerald-500">4</button>
+                        <button type="button" class="w-8 h-8 rounded-full border border-neutral-200/30 hover:border-emerald-500 focus:outline-none focus:border-emerald-500">5</button>
+                    </div>
+                    <span class="text-sm text-neutral-600">Too Large</span>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-neutral-200/30">
+                <button type="submit" class="w-full py-3 px-4 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                    Submit Review
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+</htmlCode></element><element id="bb192d24-a558-45d1-8861-5a0e37745531" data-section-id="bb192d24-a558-45d1-8861-5a0e37745531">
+
+<htmlCode>
+<section id="rating_display" class="p-6 bg-neutral-50">
+    <div class="max-w-4xl mx-auto bg-white border border-neutral-200/30 rounded-lg">
+        <div class="p-6 border-b border-neutral-200/30">
+            <h2 class="text-2xl font-semibold text-neutral-800">Product Ratings Overview</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+            <div class="border border-neutral-200/30 rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="text-3xl font-bold text-neutral-800">4.8</h3>
+                        <div class="flex items-center mt-1">
+                            <div class="flex items-center text-emerald-500">
+                                <span class="text-xl">★★★★★</span>
+                            </div>
+                            <span class="ml-2 text-sm text-neutral-600">Based on 1,234 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <span class="w-12 text-sm text-neutral-600">5 ★</span>
+                        <div class="flex-1 mx-2 h-4 rounded-full bg-neutral-100">
+                            <div class="h-4 rounded-full bg-emerald-500" style="width: 75%"></div>
+                        </div>
+                        <span class="w-12 text-sm text-neutral-600">75%</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-12 text-sm text-neutral-600">4 ★</span>
+                        <div class="flex-1 mx-2 h-4 rounded-full bg-neutral-100">
+                            <div class="h-4 rounded-full bg-emerald-500" style="width: 15%"></div>
+                        </div>
+                        <span class="w-12 text-sm text-neutral-600">15%</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-12 text-sm text-neutral-600">3 ★</span>
+                        <div class="flex-1 mx-2 h-4 rounded-full bg-neutral-100">
+                            <div class="h-4 rounded-full bg-emerald-500" style="width: 6%"></div>
+                        </div>
+                        <span class="w-12 text-sm text-neutral-600">6%</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-12 text-sm text-neutral-600">2 ★</span>
+                        <div class="flex-1 mx-2 h-4 rounded-full bg-neutral-100">
+                            <div class="h-4 rounded-full bg-emerald-500" style="width: 3%"></div>
+                        </div>
+                        <span class="w-12 text-sm text-neutral-600">3%</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-12 text-sm text-neutral-600">1 ★</span>
+                        <div class="flex-1 mx-2 h-4 rounded-full bg-neutral-100">
+                            <div class="h-4 rounded-full bg-emerald-500" style="width: 1%"></div>
+                        </div>
+                        <span class="w-12 text-sm text-neutral-600">1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-neutral-200/30 rounded-lg p-6">
+                <h3 class="text-lg font-semibold mb-4">Rating Breakdown</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-sm font-medium text-neutral-700 mb-2">Fit</h4>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-neutral-600">Too Small</span>
+                                <span class="text-xs text-neutral-600">Perfect</span>
+                                <span class="text-xs text-neutral-600">Too Large</span>
+                            </div>
+                            <div class="h-2 mt-1 bg-neutral-100 rounded-full">
+                                <div class="absolute w-4 h-4 bg-emerald-500 rounded-full" style="left: 48%; top: 12px; transform: translateX(-50%)"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-medium text-neutral-700 mb-2">Quality</h4>
+                        <div class="flex items-center">
+                            <div class="flex-1 h-2 rounded-full bg-neutral-100">
+                                <div class="h-2 rounded-full bg-emerald-500" style="width: 90%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-neutral-600">4.5/5</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-medium text-neutral-700 mb-2">Value for Money</h4>
+                        <div class="flex items-center">
+                            <div class="flex-1 h-2 rounded-full bg-neutral-100">
+                                <div class="h-2 rounded-full bg-emerald-500" style="width: 85%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-neutral-600">4.2/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 border-t border-neutral-200/30">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm text-neutral-600">Sort by:</span>
+                    <select class="p-2 border border-neutral-200/30 rounded-lg focus:outline-none focus:border-emerald-500">
+                        <option>Most Recent</option>
+                        <option>Highest Rated</option>
+                        <option>Lowest Rated</option>
+                        <option>Most Helpful</option>
+                    </select>
+                </div>
+                <button class="w-full sm:w-auto px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors">
+                    Write a Review
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="3fe39216-2f5d-4abd-9d5a-37c0f20998d1" data-section-id="3fe39216-2f5d-4abd-9d5a-37c0f20998d1">
+
+<htmlCode>
+<section id="product_details" class="p-6 bg-neutral-50">
+    <div class="max-w-6xl mx-auto bg-white border border-neutral-200/30 rounded-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6">
+            <div class="space-y-4">
+                <div class="border border-neutral-200/30 rounded-lg p-4">
+                    <img src="https://placehold.co/600x400?text=Premium+Oxford+Shirt" alt="Premium Oxford Shirt" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                    <div class="border border-neutral-200/30 rounded-lg p-2">
+                        <img src="https://placehold.co/150x150?text=Detail+1" alt="Product detail 1" class="w-full h-auto rounded">
+                    </div>
+                    <div class="border border-neutral-200/30 rounded-lg p-2">
+                        <img src="https://placehold.co/150x150?text=Detail+2" alt="Product detail 2" class="w-full h-auto rounded">
+                    </div>
+                    <div class="border border-neutral-200/30 rounded-lg p-2">
+                        <img src="https://placehold.co/150x150?text=Detail+3" alt="Product detail 3" class="w-full h-auto rounded">
+                    </div>
+                    <div class="border border-neutral-200/30 rounded-lg p-2">
+                        <img src="https://placehold.co/150x150?text=Detail+4" alt="Product detail 4" class="w-full h-auto rounded">
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <h2 class="text-2xl font-semibold text-neutral-800">Premium Oxford Shirt</h2>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-emerald-500">★★★★★</div>
+                        <span class="ml-2 text-sm text-neutral-600">4.8 (1,234 reviews)</span>
+                    </div>
+                    <p class="mt-2 text-2xl font-bold text-neutral-800">$89.99</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-neutral-700">Select Color</h3>
+                        <div class="flex space-x-2 mt-2">
+                            <button class="w-8 h-8 rounded-full bg-white border-2 border-neutral-200/30 focus:outline-none focus:ring-2 focus:ring-emerald-500"></button>
+                            <button class="w-8 h-8 rounded-full bg-blue-500 border-2 border-neutral-200/30 focus:outline-none focus:ring-2 focus:ring-emerald-500"></button>
+                            <button class="w-8 h-8 rounded-full bg-neutral-800 border-2 border-neutral-200/30 focus:outline-none focus:ring-2 focus:ring-emerald-500"></button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-medium text-neutral-700">Select Size</h3>
+                        <div class="grid grid-cols-4 gap-2 mt-2">
+                            <button class="py-2 border border-neutral-200/30 rounded text-sm font-medium hover:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">S</button>
+                            <button class="py-2 border border-neutral-200/30 rounded text-sm font-medium hover:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">M</button>
+                            <button class="py-2 border border-neutral-200/30 rounded text-sm font-medium hover:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">L</button>
+                            <button class="py-2 border border-neutral-200/30 rounded text-sm font-medium hover:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">XL</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-medium text-neutral-800">Product Details</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <span class="w-32 text-sm text-neutral-600">Material</span>
+                            <span class="text-sm text-neutral-800">100% Cotton Oxford</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-32 text-sm text-neutral-600">Fit</span>
+                            <span class="text-sm text-neutral-800">Regular Fit</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-32 text-sm text-neutral-600">Care</span>
+                            <span class="text-sm text-neutral-800">Machine washable</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-32 text-sm text-neutral-600">Origin</span>
+                            <span class="text-sm text-neutral-800">Made in Portugal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-neutral-200/30 pt-6">
+                    <button class="w-full py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                        Write a Review
+                    </button>
+                    <p class="mt-4 text-sm text-neutral-600 text-center">
+                        Share your experience with this product and help other customers make informed decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="092f8578-0880-47ea-92c7-dd9bb001eddb" data-section-id="092f8578-0880-47ea-92c7-dd9bb001eddb">
+
+<htmlCode>
+<section id="user_reviews_list" class="p-6 bg-neutral-50">
+    <div class="max-w-4xl mx-auto space-y-6">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-semibold text-neutral-800">Customer Reviews</h2>
+            <div class="flex items-center space-x-4">
+                <select class="p-2 border border-neutral-200/30 rounded-lg focus:outline-none focus:border-emerald-500">
+                    <option>Most Recent</option>
+                    <option>Highest Rated</option>
+                    <option>Lowest Rated</option>
+                    <option>With Photos</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <!-- Review 1 -->
+            <div class="bg-white border border-neutral-200/30 rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://avatar.iran.liara.run/public" alt="User" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h3 class="font-medium text-neutral-800">John Smith</h3>
+                            <p class="text-sm text-neutral-600">Verified Purchase</p>
+                        </div>
+                    </div>
+                    <span class="text-sm text-neutral-600">2 days ago</span>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex text-emerald-500">★★★★★</div>
+                    <h4 class="font-medium text-neutral-800">Perfect Fit and Great Quality</h4>
+                    <p class="text-neutral-600">The Oxford shirt exceeded my expectations. The material is high quality and the fit is perfect. I especially appreciate the attention to detail in the stitching.</p>
+                    <div class="flex space-x-2 mt-4">
+                        <img src="https://placehold.co/100x100?text=Review+1" alt="Review image 1" class="w-24 h-24 rounded-lg object-cover">
+                        <img src="https://placehold.co/100x100?text=Review+2" alt="Review image 2" class="w-24 h-24 rounded-lg object-cover">
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-4 border-t border-neutral-200/30">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-1 text-neutral-600 hover:text-emerald-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                            </svg>
+                            <span>Helpful (24)</span>
+                        </button>
+                        <button class="text-neutral-600 hover:text-emerald-500">Reply</button>
+                    </div>
+                    <button class="text-neutral-600 hover:text-emerald-500">Report</button>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white border border-neutral-200/30 rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://avatar.iran.liara.run/public" alt="User" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h3 class="font-medium text-neutral-800">Michael Johnson</h3>
+                            <p class="text-sm text-neutral-600">Verified Purchase</p>
+                        </div>
+                    </div>
+                    <span class="text-sm text-neutral-600">1 week ago</span>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex text-emerald-500">★★★★<span class="text-neutral-300">★</span></div>
+                    <h4 class="font-medium text-neutral-800">Good but Sizing Runs Large</h4>
+                    <p class="text-neutral-600">Quality is excellent but I had to return for a smaller size. Would recommend sizing down if you're between sizes.</p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-4 border-t border-neutral-200/30">
+                    <div class="flex items-center space-x-4">
+                        <button class="flex items-center space-x-1 text-neutral-600 hover:text-emerald-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                            </svg>
+                            <span>Helpful (12)</span>
+                        </button>
+                        <button class="text-neutral-600 hover:text-emerald-500">Reply</button>
+                    </div>
+                    <button class="text-neutral-600 hover:text-emerald-500">Report</button>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center">
+                <button class="px-6 py-3 border border-emerald-500 text-emerald-500 rounded-lg hover:bg-emerald-50 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                    Load More Reviews
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="19d3257c-b4b3-480e-8b22-3eae103434a0" data-section-id="19d3257c-b4b3-480e-8b22-3eae103434a0">
+
+<htmlCode>
+<section id="review_guidelines" class="p-6 bg-neutral-50">
+    <div class="max-w-4xl mx-auto bg-white border border-neutral-200/30 rounded-lg">
+        <div class="p-6 border-b border-neutral-200/30">
+            <h2 class="text-2xl font-semibold text-neutral-800">Review Guidelines</h2>
+            <p class="mt-2 text-neutral-600">Help other shoppers make informed decisions by following these guidelines</p>
+        </div>
+
+        <div class="p-6 grid gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border border-neutral-200/30 rounded-lg p-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-neutral-800">Do's</h3>
+                            <ul class="mt-2 space-y-2 text-neutral-600">
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Share your personal experience with the product</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Include details about fit, quality, and comfort</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Add photos showing the product in use</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Mention size purchased and your usual size</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-neutral-200/30 rounded-lg p-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-neutral-800">Don'ts</h3>
+                            <ul class="mt-2 space-y-2 text-neutral-600">
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Include personal information or contact details</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Use profanity or offensive language</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Promote other brands or websites</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Submit fake or misleading reviews</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <h3 class="font-medium text-neutral-800 mb-3">Tips for Writing a Helpful Review</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-500">1</div>
+                            <span class="font-medium text-neutral-800">Be Specific</span>
+                        </div>
+                        <p class="text-sm text-neutral-600">Mention specific features, materials, and how the product performed in different situations.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-500">2</div>
+                            <span class="font-medium text-neutral-800">Be Honest</span>
+                        </div>
+                        <p class="text-sm text-neutral-600">Share both positive and negative aspects of your experience with the product.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-500">3</div>
+                            <span class="font-medium text-neutral-800">Be Clear</span>
+                        </div>
+                        <p class="text-sm text-neutral-600">Write in clear, simple language that other shoppers can easily understand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-neutral-200/30 rounded-lg p-4 bg-neutral-50">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <p class="text-sm text-neutral-600">All reviews are moderated and typically appear on the site within 24-48 hours of submission. We reserve the right to remove reviews that violate our guidelines.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 border-t border-neutral-200/30 bg-neutral-50">
+            <div class="text-center">
+                <button class="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                    Write Your Review
+                </button>
+                <p class="mt-2 text-sm text-neutral-600">Your honest feedback helps improve our products and services</p>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="fbbe4c3a-a23b-4e75-98b0-93004e68f95d" data-section-id="fbbe4c3a-a23b-4e75-98b0-93004e68f95d">
+
+<htmlCode>
+<section id="helpful_feedback" class="p-6 bg-neutral-50">
+    <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-white border border-neutral-200/30 rounded-lg p-6">
+            <h2 class="text-2xl font-semibold text-neutral-800 mb-6">Most Helpful Feedback</h2>
+
+            <div class="space-y-6">
+                <!-- Top Rated Review -->
+                <div class="border-b border-neutral-200/30 pb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <img src="https://avatar.iran.liara.run/public" alt="User" class="w-12 h-12 rounded-full">
+                                <div class="absolute -top-1 -right-1 bg-emerald-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                                    ★
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-neutral-800">David Chen</h3>
+                                <p class="text-sm text-neutral-600">Top Reviewer</p>
+                            </div>
+                        </div>
+                        <span class="text-emerald-500 text-sm font-medium">Found helpful by 156 users</span>
+                    </div>
+                    <div class="flex text-emerald-500 mb-2">★★★★★</div>
+                    <h4 class="font-medium text-neutral-800 mb-2">Comprehensive Size Guide & Detailed Review</h4>
+                    <p class="text-neutral-600 mb-4">After trying multiple sizes, I can confirm that sizing down is recommended. I'm usually a L but M fits perfectly. The quality is exceptional - fabric is breathable and maintains shape after washing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm">Size: Medium</span>
+                        <span class="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm">Color: Navy</span>
+                        <span class="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm">Verified Purchase</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-4">
+                            <button class="text-neutral-600 hover:text-emerald-500 flex items-center space-x-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                </svg>
+                                <span>Helpful</span>
+                            </button>
+                            <button class="text-neutral-600 hover:text-emerald-500">Share</button>
+                        </div>
+                        <span class="text-sm text-neutral-600">Posted 2 weeks ago</span>
+                    </div>
+                </div>
+
+                <!-- Size & Fit Feedback -->
+                <div class="border border-neutral-200/30 rounded-lg p-6 bg-neutral-50">
+                    <h3 class="font-medium text-neutral-800 mb-4">Size & Fit Summary</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-600">Runs Small</span>
+                                <span class="text-neutral-600">Runs Large</span>
+                            </div>
+                            <div class="h-2 bg-neutral-200 rounded-full relative">
+                                <div class="absolute w-4 h-4 bg-emerald-500 rounded-full top-1/2 transform -translate-y-1/2" style="left: 45%"></div>
+                            </div>
+                            <p class="text-sm text-neutral-600 text-center">True to Size</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-medium text-neutral-800 mb-2">Comfort Rating</h4>
+                            <div class="flex items-center space-x-2">
+                                <div class="text-emerald-500">★★★★★</div>
+                                <span class="text-sm text-neutral-600">(4.8/5)</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-medium text-neutral-800 mb-2">Quality Rating</h4>
+                            <div class="flex items-center space-x-2">
+                                <div class="text-emerald-500">★★★★★</div>
+                                <span class="text-sm text-neutral-600">(4.9/5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Insights -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border border-neutral-200/30 rounded-lg p-4">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                            <h4 class="font-medium text-neutral-800">Durability</h4>
+                        </div>
+                        <p class="text-sm text-neutral-600">95% of reviewers mention excellent durability after multiple washes</p>
+                    </div>
+
+                    <div class="border border-neutral-200/30 rounded-lg p-4">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                            <h4 class="font-medium text-neutral-800">Sizing</h4>
+                        </div>
+                        <p class="text-sm text-neutral-600">80% recommend sizing down for optimal fit</p>
+                    </div>
+
+                    <div class="border border-neutral-200/30 rounded-lg p-4">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <h4 class="font-medium text-neutral-800">Satisfaction</h4>
+                        </div>
+                        <p class="text-sm text-neutral-600">92% would recommend to others</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="1feab702-9980-4d71-a412-3a0f5d38d66e" data-section-id="1feab702-9980-4d71-a412-3a0f5d38d66e">
+
+<htmlCode>
+<section id="review_filters" class="p-6 bg-neutral-50">
+    <div class="max-w-4xl mx-auto bg-white border border-neutral-200/30 rounded-lg">
+        <div class="p-6 border-b border-neutral-200/30">
+            <h2 class="text-2xl font-semibold text-neutral-800">Review Filters</h2>
+            <p class="mt-2 text-neutral-600">Refine reviews to find exactly what you're looking for</p>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <!-- Quick Filters -->
+            <div class="flex flex-wrap gap-3">
+                <button class="px-4 py-2 bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-lg hover:bg-emerald-100 transition-colors">
+                    Verified Purchases
+                </button>
+                <button class="px-4 py-2 bg-neutral-50 text-neutral-600 border border-neutral-200/30 rounded-lg hover:bg-neutral-100 transition-colors">
+                    With Photos
+                </button>
+                <button class="px-4 py-2 bg-neutral-50 text-neutral-600 border border-neutral-200/30 rounded-lg hover:bg-neutral-100 transition-colors">
+                    Most Recent
+                </button>
+                <button class="px-4 py-2 bg-neutral-50 text-neutral-600 border border-neutral-200/30 rounded-lg hover:bg-neutral-100 transition-colors">
+                    Highest Rated
+                </button>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Rating Filter -->
+                <div class="space-y-3">
+                    <h3 class="font-medium text-neutral-800">Rating</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox text-emerald-500 rounded border-neutral-300">
+                            <div class="flex items-center">
+                                <div class="text-emerald-500">★★★★★</div>
+                                <span class="ml-2 text-neutral-600">(1,234)</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox text-emerald-500 rounded border-neutral-300">
+                            <div class="flex items-center">
+                                <div class="text-emerald-500">★★★★</div><span class="text-neutral-300">★</span>
+                                <span class="ml-2 text-neutral-600">(567)</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox text-emerald-500 rounded border-neutral-300">
+                            <div class="flex items-center">
+                                <div class="text-emerald-500">★★★</div><span class="text-neutral-300">★★</span>
+                                <span class="ml-2 text-neutral-600">(234)</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox text-emerald-500 rounded border-neutral-300">
+                            <div class="flex items-center">
+                                <div class="text-emerald-500">★★</div><span class="text-neutral-300">★★★</span>
+                                <span class="ml-2 text-neutral-600">(89)</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox text-emerald-500 rounded border-neutral-300">
+                            <div class="flex items-center">
+                                <div class="text-emerald-500">★</div><span class="text-neutral-300">★★★★</span>
+                                <span class="ml-2 text-neutral-600">(45)</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="space-y-3">
+                    <h3 class="font-medium text-neutral-800">Size Purchased</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 transition-colors">XS</button>
+                        <button class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 transition-colors">S</button>
+                        <button class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 transition-colors">M</button>
+                        <button class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 transition-colors">L</button>
+                        <button class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 transition-colors">XL</button>
+                        <button class="px-4 py-2 border border-neutral-200/30 rounded-lg hover:border-emerald-500 transition-colors">XXL</button>
+                    </div>
+                </div>
+
+                <!-- Time Filter -->
+                <div class="space-y-3">
+                    <h3 class="font-medium text-neutral-800">Time Period</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="time" class="form-radio text-emerald-500 border-neutral-300">
+                            <span class="text-neutral-600">Last 30 days</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="time" class="form-radio text-emerald-500 border-neutral-300">
+                            <span class="text-neutral-600">Last 3 months</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="time" class="form-radio text-emerald-500 border-neutral-300">
+                            <span class="text-neutral-600">Last 6 months</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="time" class="form-radio text-emerald-500 border-neutral-300">
+                            <span class="text-neutral-600">Last year</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="radio" name="time" class="form-radio text-emerald-500 border-neutral-300">
+                            <span class="text-neutral-600">All time</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Actions -->
+            <div class="flex items-center justify-between pt-6 border-t border-neutral-200/30">
+                <button class="text-neutral-600 hover:text-emerald-500 transition-colors">
+                    Clear All Filters
+                </button>
+                <button class="px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors">
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="36d792fe-27e9-457c-9743-505bc877567a" data-section-id="36d792fe-27e9-457c-9743-505bc877567a">
+
+<htmlCode>
+<section id="review_analytics" class="p-6 bg-neutral-50">
+    <div class="max-w-6xl mx-auto bg-white border border-neutral-200/30 rounded-lg">
+        <div class="p-6 border-b border-neutral-200/30">
+            <h2 class="text-2xl font-semibold text-neutral-800">Review Analytics</h2>
+            <p class="mt-2 text-neutral-600">Detailed insights from customer reviews</p>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Key Metrics -->
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-neutral-600">Overall Rating</h3>
+                    <span class="text-emerald-500">↑ 12%</span>
+                </div>
+                <div class="flex items-baseline">
+                    <span class="text-3xl font-bold text-neutral-800">4.8</span>
+                    <div class="ml-2 text-emerald-500">★★★★★</div>
+                </div>
+                <p class="mt-2 text-sm text-neutral-600">Based on 2,345 reviews</p>
+            </div>
+
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-neutral-600">Response Rate</h3>
+                    <span class="text-emerald-500">↑ 5%</span>
+                </div>
+                <div class="flex items-baseline">
+                    <span class="text-3xl font-bold text-neutral-800">92%</span>
+                </div>
+                <p class="mt-2 text-sm text-neutral-600">Average response time: 24h</p>
+            </div>
+
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-neutral-600">Verified Reviews</h3>
+                    <span class="text-emerald-500">↑ 8%</span>
+                </div>
+                <div class="flex items-baseline">
+                    <span class="text-3xl font-bold text-neutral-800">1,890</span>
+                </div>
+                <p class="mt-2 text-sm text-neutral-600">80% of total reviews</p>
+            </div>
+
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-neutral-600">Review Length</h3>
+                    <span class="text-emerald-500">↑ 15%</span>
+                </div>
+                <div class="flex items-baseline">
+                    <span class="text-3xl font-bold text-neutral-800">156</span>
+                    <span class="ml-1 text-neutral-600">words</span>
+                </div>
+                <p class="mt-2 text-sm text-neutral-600">Average review length</p>
+            </div>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Sentiment Analysis -->
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <h3 class="font-medium text-neutral-800 mb-4">Sentiment Analysis</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-neutral-600">Positive</span>
+                            <span class="text-neutral-600">85%</span>
+                        </div>
+                        <div class="h-2 bg-neutral-100 rounded-full">
+                            <div class="h-2 bg-emerald-500 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-neutral-600">Neutral</span>
+                            <span class="text-neutral-600">10%</span>
+                        </div>
+                        <div class="h-2 bg-neutral-100 rounded-full">
+                            <div class="h-2 bg-neutral-400 rounded-full" style="width: 10%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-neutral-600">Negative</span>
+                            <span class="text-neutral-600">5%</span>
+                        </div>
+                        <div class="h-2 bg-neutral-100 rounded-full">
+                            <div class="h-2 bg-red-500 rounded-full" style="width: 5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Keywords -->
+            <div class="border border-neutral-200/30 rounded-lg p-4">
+                <h3 class="font-medium text-neutral-800 mb-4">Common Keywords</h3>
+                <div class="flex flex-wrap gap-2">
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Quality (456)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Comfort (389)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Fit (342)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Style (298)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Value (245)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Durability (198)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Material (176)</div>
+                    <div class="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm">Size (154)</div>
+                </div>
+            </div>
+
+            <!-- Product Performance -->
+            <div class="border border-neutral-200/30 rounded-lg p-4 lg:col-span-2">
+                <h3 class="font-medium text-neutral-800 mb-4">Product Performance</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-medium text-neutral-800">Fit Accuracy</h4>
+                        <div class="h-2 bg-neutral-100 rounded-full">
+                            <div class="h-2 bg-emerald-500 rounded-full" style="width: 92%"></div>
+                        </div>
+                        <p class="text-sm text-neutral-600">92% true to size</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-medium text-neutral-800">Quality Satisfaction</h4>
+                        <div class="h-2 bg-neutral-100 rounded-full">
+                            <div class="h-2 bg-emerald-500 rounded-full" style="width: 88%"></div>
+                        </div>
+                        <p class="text-sm text-neutral-600">88% satisfied</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-medium text-neutral-800">Value for Money</h4>
+                        <div class="h-2 bg-neutral-100 rounded-full">
+                            <div class="h-2 bg-emerald-500 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <p class="text-sm text-neutral-600">85% positive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 border-t border-neutral-200/30">
+            <div class="text-center">
+                <button class="px-6 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors">
+                    Download Full Analytics Report
+                </button>
+                <p class="mt-2 text-sm text-neutral-600">Updated daily at midnight PST</p>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          

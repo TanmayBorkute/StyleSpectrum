@@ -1,0 +1,122 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f7f9fc;
+    color: #333;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.5rem;
+    margin: 1.5rem;
+    color: #4a90e2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #333;
+}
+
+/* Transaction Form Styling */
+#transactionForm {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#transactionForm label {
+    font-weight: bold;
+    color: #555;
+}
+
+#transactionForm input,
+#transactionForm select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#transactionForm input:focus,
+#transactionForm select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+#transactionForm button {
+    padding: 10px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#transactionForm button:hover {
+    background-color: #357ABD;
+}
+
+/* Transaction History Table Styling */
+#transactionHistory {
+    width: 80%;
+    max-width: 700px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#transactionHistory th,
+#transactionHistory td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#transactionHistory th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#transactionHistory tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#transactionHistory tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #transactionForm, #transactionHistory {
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+}

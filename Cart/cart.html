@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Spectrum - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cart-section">
+        <h2>Your Shopping Cart</h2>
+
+        <!-- Cart Items -->
+        <div id="cart-items">
+            <div class="cart-item">
+                <p>Product Name 1</p>
+                <p>Price: $50</p>
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" min="1" value="1" onchange="updateTotal()">
+            </div>
+
+            <div class="cart-item">
+                <p>Product Name 2</p>
+                <p>Price: $30</p>
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" min="1" value="1" onchange="updateTotal()">
+            </div>
+
+            <div class="cart-item">
+                <p>Product Name 3</p>
+                <p>Price: $70</p>
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" min="1" value="1" onchange="updateTotal()">
+            </div>
+        </div>
+
+        <!-- Total Price -->
+        <div class="cart-total">
+            <h3>Total: $<span id="total-price">0</span></h3>
+        </div>
+
+        <!-- Checkout Button -->
+        <button onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <script>
+        function updateTotal() {
+            // Product prices
+            const prices = [50, 30, 70];
+            let total = 0;
+
+            // Loop through each item to calculate the total
+            for (let i = 1; i <= prices.length; i++) {
+                const quantity = document.getElementById(`quantity${i}`).value;
+                total += prices[i - 1] * quantity;
+            }
+
+            // Display the total
+            document.getElementById("total-price").innerText = total;
+        }
+
+        function checkout() {
+            alert("Proceeding to checkout. Total Amount: $" + document.getElementById("total-price").innerText);
+        }
+
+        // Initialize total on page load
+        window.onload = updateTotal;
+    </script>
+
+</body>
+</html>
